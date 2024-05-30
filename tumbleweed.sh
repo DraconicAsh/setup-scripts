@@ -6,7 +6,7 @@ norm=$(tput sgr0)
 zypper in --no-recommends git zsh niri mako pipewire polkit-gnome xdg-desktop-portal-gtk
 
 # Greeter setup
-read -p "Select a greeter (default T): ${bold}T${norm}uigreet | ${bold}S${norm}DDM:"  ans
+read -pr "Select a greeter (default T): ${bold}T${norm}uigreet | ${bold}S${norm}DDM:"  ans
 case $ans in
     S|s)
         echo "${bold}Installing SDDM...${norm}"
@@ -18,7 +18,7 @@ case $ans in
 esac
 
 # Neovim setup
-read -p "Setup Neovim? (Will install clang and npm) [Yn]? " ans
+read -pr "Setup Neovim? (Will install clang and npm) [Yn]? " ans
 case $ans in
     N|n)
         echo "${bold}Skipping Neovim setup...${norm}"
